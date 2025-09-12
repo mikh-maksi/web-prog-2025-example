@@ -12,9 +12,17 @@
 </head>
 <body>
     <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita inventore dolorem unde placeat a, impedit sequi ullam quas alias tenetur nesciunt officia, id libero, modi sed ut ab pariatur?</p>
+    <button id = "btn">Click me</button>
     <script>
         let var_p2 = document.getElementById("p2");
-        var_p2.classList="green";
+        let var_btn = document.getElementById("btn");
+        var_btn.addEventListener("click",fnc);
+
+        function fnc (){
+            var_p2.classList="green";
+        }
+
+
         console.log(var_p2);
     </script>
 </body>
