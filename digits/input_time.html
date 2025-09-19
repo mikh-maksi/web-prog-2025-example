@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="time_input"><br>
+    <button id ="btn">Compute</button>
+    <p id = "result"></p>
+    <script>
+        let time_input = document.getElementById("time_input");
+        let btn = document.getElementById("btn");
+        let result = document.getElementById("result");
+
+        btn.addEventListener("click",comp);
+        function comp(){
+            time = parseInt(time_input.value);
+            let s = time % 60;
+            let m = Math.floor(time/60)%60;
+            let h = Math.floor(time/3600);
+            result.innerHTML="Час в секундах: "+time+"<br>"+"Години: "+h +" Хвилини: "+m+" Секунди: "+s;
+            console.log("Час в секундах: "+time);
+            console.log("Години: "+h +" Хвилини: "+m+" Секунди: "+s);
+        }
+    </script>
+</body>
+</html>
