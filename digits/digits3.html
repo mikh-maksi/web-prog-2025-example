@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 726;
+        let a1 = a%10; // залишок від ділення
+        let a2_1 = a%100; // залишок від ділення
+        let a2_2 = Math.floor(a/10); // залишок від ділення
+
+        let a2 = a2_2%10;
+        a2 = Math.floor(a/10)%10;
+
+        let a3 = Math.floor(a/100); //ділення націло
+
+        console.log("Вхідне число: "+a);        
+        console.log("a1 = "+a1+" a2 = "+a2+" a3 = "+a3);
+        console.log("a2_1 = "+a2_1+" a2_2 = "+a2_2);
+        
+    </script>
+</body>
+</html>
