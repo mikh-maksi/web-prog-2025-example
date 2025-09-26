@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inpt_x">x:</label><input type="text" id = "inpt_x" value = "5"><br>
+    <label for="inpt_y">y:</label><input type="text" id = "inpt_y" value = "7"><br>
+
+    <button id = "btn">Обрахувати чверь</button>
+    <p id="result"></p>
+    <script>
+        let inpt_x = document.getElementById("inpt_x");
+        let inpt_y = document.getElementById("inpt_y");
+        let btn = document.getElementById("btn");
+        let result = document.getElementById("result");
+
+        btn.addEventListener("click",fnc);
+
+        function fnc(){
+            let x = parseInt(inpt_x.value);
+            let y = parseInt(inpt_y.value);
+       
+            if ((x>0) && (y>0)) {result.innerHTML= "Точка лежить в I чверті";} 
+            if ((x>0) && (y<0)) {result.innerHTML= "Точка лежить в II чверті";} 
+            if ((x<0) && (y<0)) {result.innerHTML= "Точка лежить в III чверті";} 
+            if ((x<0) && (y>0)) {result.innerHTML= "Точка лежить в IV чверті";} 
+        }
+
+
+        // let a = Math.floor(Math.random()*10);
+        // let b = Math.floor(Math.random()*10);
+
+    </script>
+</body>
+</html>
