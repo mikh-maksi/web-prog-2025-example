@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inpt_a">a:</label><input type="text" id = "inpt_a" value = "5"><br>
+
+    <button id = "btn">Порівняти</button>
+    <p id="result"></p>
+    <script>
+        let inpt_a = document.getElementById("inpt_a");
+
+        let btn = document.getElementById("btn");
+        let result = document.getElementById("result");
+
+        btn.addEventListener("click",fnc);
+
+        function fnc(){
+            let a = parseInt(inpt_a.value);
+
+            if ((a>=10)&&(a<=99) && (a%2==0)){
+                result.innerHTML="число a є парним двоцифровим";
+            } else{
+                result.innerHTML="число a не є парним двоцифровим";
+            }
+                
+        }
+
+        
+
+
+        let a = Math.floor(Math.random()*10);
+        let b = Math.floor(Math.random()*10);
+
+    </script>
+</body>
+</html>
