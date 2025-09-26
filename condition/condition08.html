@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inpt_a">a:</label><input type="text" id = "inpt_a" value = "5"><br>
+
+    <button id = "btn">Порівняти</button>
+    <p id="result"></p>
+    <script>
+        let inpt_a = document.getElementById("inpt_a");
+
+        let btn = document.getElementById("btn");
+        let result = document.getElementById("result");
+
+        btn.addEventListener("click",fnc);
+
+        function fnc(){
+            let a = parseInt(inpt_a.value);
+
+            if ((a%2==0)&&(a%3==0)){
+                result.innerHTML="число a кратно 2 та кратно 3";
+            } else{
+                result.innerHTML="число a не кратно 2 та 3 одночасно";
+            }
+                
+        }
+
+        
+
+
+        let a = Math.floor(Math.random()*10);
+        let b = Math.floor(Math.random()*10);
+
+    </script>
+</body>
+</html>
