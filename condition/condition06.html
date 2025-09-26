@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inpt_k">k:</label><input type="text" id = "inpt_k" value = "5"><br>
+    <label for="inpt_l">l:</label><input type="text" id = "inpt_l" value = "7"><br>
+
+    <button id = "btn">Обрахувати задачу</button>
+    <p id="result"></p>
+    <script>
+        let inpt_k = document.getElementById("inpt_k");
+        let inpt_l = document.getElementById("inpt_l");
+        let btn = document.getElementById("btn");
+        let result = document.getElementById("result");
+
+        btn.addEventListener("click",fnc);
+
+        function fnc(){
+            let k = parseInt(inpt_k.value);
+            let l = parseInt(inpt_l.value);
+       
+            if (k==l) {k = 0; l = 0;}
+            if (k!=l){
+                if (k>l){
+                    l=k;
+                } else{
+                    k=l;
+                }
+            }
+            result.innerHTML= "k = "+k+" l = "+l;
+        }
+
+    </script>
+</body>
+</html>
