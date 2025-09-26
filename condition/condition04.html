@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inpt_a">a:</label><input type="text" id = "inpt_a" value = "5"><br>
+    <label for="inpt_b">b:</label><input type="text" id = "inpt_b" value = "7"><br>
+    <label for="inpt_c">c:</label><input type="text" id = "inpt_c" value = "9"><br>
+    <button id = "btn">Порівняти</button>
+    <p id="result"></p>
+    <script>
+        let inpt_a = document.getElementById("inpt_a");
+        let inpt_b = document.getElementById("inpt_b");
+        let inpt_c = document.getElementById("inpt_c");
+        let btn = document.getElementById("btn");
+        let result = document.getElementById("result");
+
+        btn.addEventListener("click",fnc);
+
+        function fnc(){
+            let a = parseInt(inpt_a.value);
+            let b = parseInt(inpt_b.value);
+            let c = parseInt(inpt_c.value);
+       
+            if ((a>b) && (a>c)) {result.innerHTML= "a - найбільше число";} 
+            if ((b>a) && (b>c)) {result.innerHTML= "b - найбільше число";} 
+            if ((c>a) && (c>b)) {result.innerHTML= "c - найбільше число";} 
+
+            if ((a==b) && (a>c)) {result.innerHTML= "a,b - найбільші числа";} 
+            if ((a==c) && (a>b)) {result.innerHTML= "a,c - найбільші числа";} 
+            if ((b==c) && (b>a)) {result.innerHTML= "b,c - найбільші числа";} 
+            if ((a==b) && (b==c)) {result.innerHTML= "a,b,c - найбільші числа та дорівнюють одне одному";} 
+
+        }
+
+
+        // let a = Math.floor(Math.random()*10);
+        // let b = Math.floor(Math.random()*10);
+
+    </script>
+</body>
+</html>
