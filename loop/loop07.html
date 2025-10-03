@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгоритм обрахунку суми послідовних чисел</title>
+</head>
+<body>
+    <script>
+        let base = 1000;
+        let percents = 13;
+        let ratio = percents/100; //0.05
+        let term = 5;
+
+        let sum=base // змінна-накопичувач
+        for(let i=1;i<=term;i+=1){ //i - лічільник циклу
+            sum = sum + sum*ratio; 
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>
