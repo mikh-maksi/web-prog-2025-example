@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгоритм обрахунку суми послідовних чисел</title>
+</head>
+<body>
+    <script>
+        let a = 5;
+        let b = 10;
+        let sum=0 // змінна-накопичувач
+        for(let i=a;i<=b;i+=1){
+            if (i%2==1){
+
+                console.log("i="+i+" i^2="+i*i);
+                sum = sum + i*i; 
+            }
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>
