@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Алгоритм сортування масиву.
+        let arr = [];
+        let arr_i_length = 3;
+        let arr_j_length = 3;
+        let a,k;
+        for(let i = 0;i<arr_i_length;i+=1){
+            tmp_arr = []
+            for(let j = 0;j<arr_j_length;j+=1){
+                a = Math.floor((Math.random())*100); // Math.random : [0;1]
+                tmp_arr.push(a);
+            }
+            arr.push(tmp_arr);
+        }
+
+        console.log(arr);
+        let sum = 0;
+        for(let i=0;i<arr_i_length;i+=1){
+            for(let j=0;j<arr_i_length;j+=1){
+                console.log(arr[i][j]);
+                if (i==0){
+                    sum+=arr[i][j];
+                }
+
+            }
+        }
+        console.log("Сума елементів, що стоять в першому рядку: "+sum);
+    </script>
+</body>
+</html>
