@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // задано дохід за кожний з 12 місяців, знайти дохід за літні місяці.
+        let arr = [];
+        let arr_length = 12;
+        let a;
+        for(let i = 0;i<arr_length;i+=1){
+            a = Math.random()-0.5; // Math.random : [0;1]
+            arr.push(a);
+        }
+
+        console.log(arr);
+
+        let n = 0;
+        for(let i =0;i<arr.length;i+=1){
+            if (arr[i]<0){
+                n+=1;
+            }
+        }
+    console.log("В масиві "+ n +" негативних елементів");
+    </script>
+</body>
+</html>

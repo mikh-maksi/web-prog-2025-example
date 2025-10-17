@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Алгоритм пошуку максимального елементу в масиві.
+        let arr = [];
+        let arr_length = 12;
+        let a;
+        for(let i = 0;i<arr_length;i+=1){
+            a = Math.floor((Math.random()-0.5)*100); // Math.random : [0;1]
+            arr.push(a);
+        }
+
+        console.log(arr);
+
+        let max = arr[0];
+        let i_max = 0;
+        for(let i =0;i<arr.length;i+=1){
+            if (arr[i]>max){
+                max=arr[i];
+                i_max = i;
+            }
+        }
+    console.log("Найбільший елемент в масиві: "+ max+" Він знаходиться на позиції: "+i_max);
+    </script>
+</body>
+</html>
