@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let arr_length = 15;
+        let a;
+        for(let i = 0;i<arr_length;i+=1){
+            a = Math.floor(Math.random()*10);
+            arr.push(a);
+        }
+
+        console.log(arr);
+
+        let n = 0;
+        for(let i =0;i<arr.length;i+=1){
+            if (arr[i]%2!=0){
+                n+=1;
+            }
+        }
+    console.log("Кількість непарних елеентів: "+ n);
+    </script>
+</body>
+</html>
