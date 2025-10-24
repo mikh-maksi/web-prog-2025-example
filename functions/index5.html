@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function ln(x1,y1,x2,y2){
+        let result = Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2))
+        return result
+    }
+    city = {"name":"Kyiv","population":2952301,"lan":55.75,"lon":37.616667,"lan_deg":"50°27′00″","lon_deg":"30°31′25″"}
+    cities = [];
+    cities.push(city);
+    let s = JSON.stringify(cities);
+    console.log(s);
+    let input_s='[{"name":"Kyiv","population":2952301,"lan":55.75,"lon":37.616667,"lan_deg":"50°27′00″","lon_deg":"30°31′25″"},{"name":"Kharkiv","population":1421125,"lan":50.005833,"lon":36.229167,"lan_deg":"50°0′21″","lon_deg":"36°13′45″"}]';
+    cities_from_json = JSON.parse(input_s);
+    console.log(cities_from_json[0]);
+    let city_len = ln(cities_from_json[0].lan,cities_from_json[1].lan,cities_from_json[0].lon,cities_from_json[1].lon);
+    console.log(city_len);
+</script>
+</html>

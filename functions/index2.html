@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="a">a:</label><input type="text" id="a"><br>
+    <label for="b">b:</label><input type="text" id="b"><br>
+    <button id="btn">Calculate</button>
+    <p id="result"></p>
+</body>
+    <script>
+        let a = document.getElementById("a");
+        let b = document.getElementById("b");
+        let btn = document.getElementById("btn");
+        let result = document.getElementById("result");
+        btn.addEventListener("click", calculate);
+        function calculate(){
+            let val_a = parseInt(a.value);
+            let val_b = parseInt(b.value);
+            let res = val_a + val_b;
+            result.innerHTML = res;
+        }
+    </script>
+</html>
