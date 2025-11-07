@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .row{
+        display: flex;
+    }
+    .cell{
+        border:1px solid black;
+        width:150px;
+        text-align:center;
+        font-size:40px;
+    }
+</style>
+<body>
+    <div class="row">
+        <div class="cell" id = "d00">1</div>
+        <div class="cell" id = "d01">2</div>
+        <div class="cell" id = "d02">3</div>
+    </div>
+    <div class="row">
+        <div class="cell" id = "d10">1</div>
+        <div class="cell" id = "d11">2</div>
+        <div class="cell" id = "d12">3</div>
+    </div>
+    <div class="row">
+        <div class="cell" id = "d20">1</div>
+        <div class="cell" id = "d21">2</div>
+        <div class="cell" id = "d22">3</div>
+    </div>
+</body>
+<script>
+        let str_json = `
+                    [
+            {
+            "ccy":"EUR",
+            "base_ccy":"UAH",
+            "buy":"19.2",
+            "sale":"20.0"
+            },
+            {
+            "ccy":"USD",
+            "base_ccy":"UAH",
+            "buy":"15.5",
+            "sale":"15.85"
+            }
+            ]
+            `;
+        let json_var = JSON.parse(str_json);
+
+
+    let d00 = document.getElementById("d00");
+    let d01 = document.getElementById("d01");
+    let d02 = document.getElementById("d02");
+
+    let d10 = document.getElementById("d10");
+    let d11 = document.getElementById("d11");
+    let d12 = document.getElementById("d12");
+
+    let d20 = document.getElementById("d20");
+    let d21 = document.getElementById("d21");
+    let d22 = document.getElementById("d22");
+
+    d00.innerHTML = "";
+    d01.innerHTML = "Купівля";
+    d02.innerHTML = "Продаж";
+    
+    d10.innerHTML = json_var[0]["ccy"];
+    d11.innerHTML = json_var[0]["buy"];
+    d12.innerHTML = json_var[0]["sale"];
+
+    d20.innerHTML = json_var[1]["ccy"];
+    d21.innerHTML = json_var[1]["buy"];
+    d22.innerHTML = json_var[1]["sale"];
+
+
+</script>
+</html>
