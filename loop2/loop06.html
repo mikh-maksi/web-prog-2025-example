@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Дільника числа</h2>
+    <p>Дільники числа <span id = "out_n"></span></p>
+    <p id = "out_result"></p>
+    <script>
+        let out_n = document.getElementById("out_n");
+        let n = Math.floor(Math.random()*200);
+        out_n.innerHTML = n;
+        console.log("n = "+n);
+        let result = "";
+        for(let i=1;i<=n/2;i+=1){
+            if (n%i==0){
+                console.log(i);
+                result+=i+" ";
+            }
+        }
+        result+=n;
+        console.log(result);
+        out_result.innerHTML=result;
+    </script>
+</body>
+</html>

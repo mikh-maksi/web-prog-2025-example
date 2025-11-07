@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Дільника числа</h2>
+    <p>Дільники числа 120</p>
+    <p>1 2 3 4 5 6 8 10 12 15 20 24 30 40 60 </p>
+    <script>
+        let n = 120;
+        let result = "";
+        for(let i=1;i<=n/2;i+=1){
+            if (n%i==0){
+                console.log(i);
+                result+=i+" ";
+            }
+        }
+        console.log(result);
+    </script>
+</body>
+</html>

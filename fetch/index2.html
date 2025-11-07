@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const proxy = "https://cors-anywhere.herokuapp.com/"; // demo — може бути недоступний
+const url = proxy + "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5";
+
+fetch(url)
+  .then(r => r.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+
+    </script>
+</body>
+</html>
