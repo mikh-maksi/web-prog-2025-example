@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .row{
+        display: flex;
+    }
+    .cell{
+        border:1px solid black;
+        width:150px;
+        text-align:center;
+        font-size:40px;
+    }
+</style>
+<body>
+    <div class="row">
+        <div class="cell" id = "d00">1</div>
+        <div class="cell" id = "d01">2</div>
+        <div class="cell" id = "d02">3</div>
+    </div>
+    <div class="row">
+        <div class="cell" id = "d10">1</div>
+        <div class="cell" id = "d11">2</div>
+        <div class="cell" id = "d12">3</div>
+    </div>
+    <div class="row">
+        <div class="cell" id = "d20">1</div>
+        <div class="cell" id = "d21">2</div>
+        <div class="cell" id = "d22">3</div>
+    </div>
+</body>
+<script>
+    let d00 = document.getElementById("d00");
+    let d01 = document.getElementById("d01");
+    let d02 = document.getElementById("d02");
+
+    let d10 = document.getElementById("d10");
+    let d11 = document.getElementById("d11");
+    let d12 = document.getElementById("d12");
+
+    let d20 = document.getElementById("d20");
+    let d21 = document.getElementById("d21");
+    let d22 = document.getElementById("d22");
+
+    d00.innerHTML = "";
+    d01.innerHTML = "Купівля";
+    d02.innerHTML = "Продаж";
+    
+    d10.innerHTML = "USD";
+    d11.innerHTML = "19.20000";
+    d12.innerHTML = "20.00000";
+
+    d20.innerHTML = "EUR";
+    d21.innerHTML = "15.50000";
+    d22.innerHTML = "15.85000";
+
+
+</script>
+</html>
