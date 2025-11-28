@@ -23,25 +23,7 @@
       </div>
     </div>
   <div class="container">
-             <div>
-    before main text
-</div>
-<div>
-    Start
-    $$\begin{pmatrix}
-1 & 1 & 1 \\
-1 & 1 & 1\\
-1 & 1 & 1
-\end{pmatrix} \cdot \begin{pmatrix}
-1 & 1 & 1 \\
-1 & 1 & 1\\
-1 & 1 & 1
-\end{pmatrix} = \begin{pmatrix}
-1 & 1 & 1 \\
-1 & 1 & 1\\
-1 & 1 & 1
-\end{pmatrix}$$
-        </div>
+
     <?php $project_management_theme_layout = get_theme_mod( 'project_management_page_layout','Right Sidebar');
             if($project_management_theme_layout == 'One Column'){ ?>
                 <?php while ( have_posts() ) : the_post();
@@ -60,6 +42,14 @@
         <?php }else if($project_management_theme_layout == 'Right Sidebar'){ ?>
             <div class="row">
                 <div class="col-lg-9 col-md-8 mt-5">
+             <div>
+    before main text
+</div>
+<div>
+    Start
+
+        </div>
+
                     <?php
                         while ( have_posts() ) :
                           the_post();
